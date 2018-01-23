@@ -36,5 +36,10 @@
     "gulp-typescript": "^2.13.4",
     "gulp-uglify": "^1.5.3",
     "ordered-merge-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.40",
+    "@types/angular-material": "^1.1.57",
+    "@types/jquery": "^3.3.0"
   }
 }

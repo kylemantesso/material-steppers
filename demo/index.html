@@ -31,7 +31,7 @@
 
     <md-stepper id="stepper-demo" md-mobile-step-text="vm.isMobileStepText" md-vertical="vm.isVertical" md-linear="vm.isLinear"
         md-alternative="vm.isAlternative">
-        <md-step md-label="Select a campaign">
+        <md-step md-label="Select a campaign" md-step-number="1">
             <md-step-body>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
                     sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
@@ -53,7 +53,7 @@
             </md-step-actions>
         </md-step>
 
-        <md-step md-label="Create an group">
+        <md-step md-label="Create an group" md-step-number="0">
             <md-step-body>
                 <md-input-container>
                     <label>Username</label>
@@ -82,7 +82,7 @@
             </md-step-actions>
         </md-step>
 
-        <md-step md-label="Create an ad">
+        <md-step md-label="Create an ad" md-step-number="2">
             <md-step-body>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
                     sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
@@ -119,18 +119,6 @@
             </md-step-actions>
         </md-step>
 
-        <md-step md-label="Publish the ad" md-optional="Optional">
-            <md-step-body>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-            </md-step-body>
-            <md-step-actions>
-                <md-button class="md-primary md-raised" ng-click="vm.nextStep();">Complete</md-button>
-                <md-button class="md-primary" ng-click="vm.previousStep();">Back</md-button>
-            </md-step-actions>
-        </md-step>
-
 
     </md-stepper>
 
@@ -145,7 +133,7 @@
     <!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>-->
 
     <!-- material-steppers Library -->
-    <script src="material-steppers.min.js"></script>
+    <script src="material-steppers.js"></script>
 
     <!-- Application bootstrap  -->
     <script type="text/javascript" src="demo.js"></script>

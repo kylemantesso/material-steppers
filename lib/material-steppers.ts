@@ -61,7 +61,12 @@ class StepperCtrl {
      * @returns number - The step number.
      */
     $addStep(step: StepCtrl) {
-        return this.steps.push(step) - 1;
+        if(step.stepNumber) {
+            this.steps[step.stepNumber] = step;
+            return step.stepNumber;
+        } else {
+            return this.steps.push(step) - 1;
+        }
     }
 
     /**
@@ -210,10 +215,10 @@ class StepCtrl {
 
     public label: string;
     public optional: string;
+    public stepNumber: number;
+
 
     /* End of bindings */
-
-    public stepNumber: number;
 
     public $stepper: StepperCtrl;
 
@@ -264,6 +269,7 @@ angular.module('mdSteppers', ['ngMaterial'])
             require: '^^mdStepper',
             transclude: true,
             scope: {
+                stepNumber: '@mdStepNumber',
                 label: '@mdLabel',
                 optional: '@?mdOptional'
             },
